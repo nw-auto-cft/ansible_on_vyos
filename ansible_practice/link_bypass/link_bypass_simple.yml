@@ -11,7 +11,7 @@
 
     - name: vrrp state before
       debug:
-        var: result.stdout[0]
+        var: result.stdout_lines[0]
 
     - name: change priority of vrrp
       vyos_config:
@@ -28,4 +28,4 @@
 
     - name: vrrp state after
       debug:
-        var: result.stdout[0]
+        var: result.stdout_lines[0]
